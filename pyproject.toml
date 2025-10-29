@@ -58,7 +58,7 @@ lint = [
 package-dir = {"" = "src"}
 
 [tool.setuptools.package-data]
-"onelogin.saml2.schemas" = ["*.xsd"]
+"python3_saml.saml2.schemas" = ["*.xsd"]
 
 [tool.pytest.ini_options]
 minversion = "4.6.11"
@@ -99,7 +99,7 @@ branch = true
 
 [tool.coverage.paths]
 source = [
-    "src/onelogin/saml2"
+    "src/python3_saml/saml2"
 ]
 
 [tool.coverage.report]

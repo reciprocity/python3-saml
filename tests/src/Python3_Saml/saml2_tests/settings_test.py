@@ -5,10 +5,10 @@ import json
 from os.path import dirname, join, exists, sep
 import unittest
 
-from onelogin.saml2 import compat
-from onelogin.saml2.errors import OneLogin_Saml2_Error
-from onelogin.saml2.settings import OneLogin_Saml2_Settings
-from onelogin.saml2.utils import OneLogin_Saml2_Utils
+from python3_saml.saml2 import compat
+from python3_saml.saml2.errors import OneLogin_Saml2_Error
+from python3_saml.saml2.settings import OneLogin_Saml2_Settings
+from python3_saml.saml2.utils import OneLogin_Saml2_Utils
 
 
 class OneLogin_Saml2_Settings_Test(unittest.TestCase):
