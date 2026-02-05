@@ -54,10 +54,7 @@ class OneLogin_Saml2_IdPMetadataParser(object):
         ctx = None
         if not validate_cert:
             if cafile or capath:
-                raise ValueError(
-                    "Specifying 'cafile' or 'capath' while disabling certificate "
-                    "validation is contradictory."
-                )
+                raise ValueError("Specifying 'cafile' or 'capath' while disabling certificate " "validation is contradictory.")
             ctx = ssl.create_default_context()
             ctx.check_hostname = False
             ctx.verify_mode = ssl.CERT_NONE
