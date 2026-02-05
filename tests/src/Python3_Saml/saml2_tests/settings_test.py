@@ -174,18 +174,18 @@ class OneLogin_Saml2_Settings_Test(unittest.TestCase):
         settingsInfo = self.loadSettingsJSON()
         settings = OneLogin_Saml2_Settings(settingsInfo)
         path = settings.get_base_path()
-        self.assertEqual(settings.get_lib_path(), join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/onelogin/saml2/"))
-        self.assertEqual(path, join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/onelogin/saml2/../../../tests/data/customPath/"))
+        self.assertEqual(settings.get_lib_path(), join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/python3_saml/saml2/"))
+        self.assertEqual(path, join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/python3_saml/saml2/../../../tests/data/customPath/"))
 
         del settingsInfo["custom_base_path"]
         settings = OneLogin_Saml2_Settings(settingsInfo)
         path = settings.get_base_path()
-        self.assertEqual(settings.get_lib_path(), join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/onelogin/saml2/"))
+        self.assertEqual(settings.get_lib_path(), join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/python3_saml/saml2/"))
         self.assertEqual(path, join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/"))
 
         settings = OneLogin_Saml2_Settings(custom_base_path=self.settings_path)
         path = settings.get_base_path()
-        self.assertEqual(settings.get_lib_path(), join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/onelogin/saml2/"))
+        self.assertEqual(settings.get_lib_path(), join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/python3_saml/saml2/"))
         self.assertEqual(path, join(dirname(dirname(dirname(dirname(__file__)))), "settings/"))
 
     def testGetSchemasPath(self):
@@ -195,18 +195,18 @@ class OneLogin_Saml2_Settings_Test(unittest.TestCase):
         settingsInfo = self.loadSettingsJSON()
         settings = OneLogin_Saml2_Settings(settingsInfo)
         path = settings.get_base_path()
-        self.assertEqual(settings.get_schemas_path(), join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/onelogin/saml2/schemas/"))
-        self.assertEqual(path, join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/onelogin/saml2/../../../tests/data/customPath/"))
+        self.assertEqual(settings.get_schemas_path(), join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/python3_saml/saml2/schemas/"))
+        self.assertEqual(path, join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/python3_saml/saml2/../../../tests/data/customPath/"))
 
         del settingsInfo["custom_base_path"]
         settings = OneLogin_Saml2_Settings(settingsInfo)
         path = settings.get_base_path()
-        self.assertEqual(settings.get_schemas_path(), join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/onelogin/saml2/schemas/"))
+        self.assertEqual(settings.get_schemas_path(), join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/python3_saml/saml2/schemas/"))
         self.assertEqual(path, join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/"))
 
         settings = OneLogin_Saml2_Settings(custom_base_path=self.settings_path)
         path = settings.get_base_path()
-        self.assertEqual(settings.get_schemas_path(), join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/onelogin/saml2/schemas/"))
+        self.assertEqual(settings.get_schemas_path(), join(dirname(dirname(dirname(dirname(dirname(__file__))))), "src/python3_saml/saml2/schemas/"))
         self.assertEqual(path, join(dirname(dirname(dirname(dirname(__file__)))), "settings/"))
 
     def testGetIdPSSOurl(self):
